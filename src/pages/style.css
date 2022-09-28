@@ -1,0 +1,87 @@
+.div1 {
+    display: flex;
+    width: 500px;
+    background: white;
+}
+
+.div2 {
+    display: flex;
+    width: 50%;
+}
+
+.principal {
+    border: solid #2196f340;
+    display: flex;
+    width: 800px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 51px;
+    margin-bottom: 60px;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 8px;
+    margin-left: -62px;
+}
+
+.label2 {
+    margin-left: -83px;
+}
+
+.label3 {
+    margin-left: -42px;
+    margin-top: 10px;
+}
+
+input {
+    height: 27px;
+    border-radius: 6px;
+    width: 204px;
+    margin-top: -6px;
+    margin-bottom: 13px;
+    border-color: #019ad2;
+}
+
+span {
+    font-size: 10px;
+    margin-left: -104px;
+    margin-top: -12px;
+}
+
+.myButton {
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+    background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    background-color: #33bdef;
+    border-radius: 6px;
+    border: 1px solid #057fd0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #5b6178;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+    background-color: #019ad2;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
