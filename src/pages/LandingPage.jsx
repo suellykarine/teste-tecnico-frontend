@@ -1,10 +1,22 @@
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import * as yup from "yup";
 import Display from "../componentes/Display";
 import api from "../service/api";
 import "./style.css";
 
-const LandingPage = ({ dados, setDados }) => {
-  const { register, handleSubmit, reset } = useForm();
+const LandingPage = ({ info, setInfo }) => {
+  const formSchema = yup.object().shape({
+    amount: yup.number(),
+
+    installments: yup.number(),
+    mdr: yup.number(),
+  });
+
+  const { register, handleSubmit, reset } = useForm({
+    resolver: yupResolver(formSchema),
+  });
+
   const onSubmitCadastrar = ({ amount, installments, mdr }) => {
     const data = {
       amount,
@@ -14,10 +26,10 @@ const LandingPage = ({ dados, setDados }) => {
     api
       .post("", data)
       .then((response) => {
-        setDados(response.data);
+        setInfo(response.data);
       })
       .catch((err) => {
-        setDados(err.response);
+        setInfo(err.response);
       });
 
     reset();
@@ -55,7 +67,7 @@ const LandingPage = ({ dados, setDados }) => {
         </form>
       </div>
       <div className="div2">
-        <Display dados={dados} />
+        <Display info={info} />
       </div>
     </div>
   );

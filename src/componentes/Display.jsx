@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Display = ({ dados }) => {
+const Display = ({ info }) => {
   return (
     <div className="divDisplay">
       <p className="title"> Você receberá : </p>
@@ -9,17 +9,17 @@ const Display = ({ dados }) => {
         Amanhã:{" "}
         <b>
           R$
-          {dados["1"]}
+          {info["1"]}
         </b>
       </p>
       <p>
-        Em 15 dias: <b>R$ {dados["15"]}</b>
+        Em 15 dias: <b>R$ {info["15"]}</b>
       </p>
       <p>
-        Em 30 dias: <b>R$ {dados["30"]}</b>
+        Em 30 dias: <b>R$ {info["30"]}</b>
       </p>
       <p>
-        Em 90 dias: <b>R$ {dados["90"]}</b>
+        Em 90 dias: <b>R$ {info["90"]}</b>
       </p>
     </div>
   );

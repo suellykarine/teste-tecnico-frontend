@@ -3,10 +3,10 @@ import "./App.css";
 import LandingPage from "./pages/LandingPage";
 
 function App() {
-  const [dados, setDados] = useState({});
+  const [info, setInfo] = useState({});
   return (
     <div className="divapp">
-      <LandingPage dados={dados} setDados={setDados} />
+      <LandingPage info={info} setInfo={setInfo} />
     </div>
   );
 }
