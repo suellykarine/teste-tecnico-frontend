@@ -8,18 +8,39 @@ const Display = ({ info }) => {
       <p>
         Amanhã:{" "}
         <b>
-          R$
-          {info["1"]}
+          {info["1"]?.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
         </b>
       </p>
       <p>
-        Em 15 dias: <b>R$ {info["15"]}</b>
+        Em 15 dias:{" "}
+        <b>
+          {" "}
+          {info["15"]?.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </b>
       </p>
       <p>
-        Em 30 dias: <b>R$ {info["30"]}</b>
+        Em 30 dias:{" "}
+        <b>
+          {info["30"]?.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </b>
       </p>
       <p>
-        Em 90 dias: <b>R$ {info["90"]}</b>
+        Em 90 dias:{" "}
+        <b>
+          {info["90"]?.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </b>
       </p>
     </div>
   );

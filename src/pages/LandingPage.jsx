@@ -37,7 +37,7 @@ const LandingPage = ({ info, setInfo }) => {
   return (
     <div className="principal">
       <div className="div1">
-        <form className="formulario" onSubmit={handleSubmit(onSubmitCadastrar)}>
+        <form className="format" onSubmit={handleSubmit(onSubmitCadastrar)}>
           <h1>Simule sua antecipação</h1>
           <label> Informe o valor da venda*</label>
           <input
